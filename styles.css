@@ -1,0 +1,45 @@
+@font-face {
+	src: url(fonts/HelveticaNeue.ttc);
+	font-family: "HelveticaNeue";
+}
+
+body {
+	width: 100%;
+	font-family: "HelveticaNeue", sans-serif;
+}
+
+.container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding-top: 70px;
+	min-width: 1920px;
+	min-height: 1080px;
+}
+
+.logo {
+	width: 112px;
+	margin-bottom: 85px;
+}
+
+.bg-image {
+	margin-bottom: 123px;
+}
+
+.buttons {
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	gap: 26px;
+}
+
+.main-btn {
+	font-family: "HelveticaNeue", sans-serif;
+	display: block;
+	padding: 18px 82px;
+	border-radius: 8px;
+	text-decoration: none;
+	background-color: #62a1eb;
+	color: #fff;
+	font-size: 20px;
+}
