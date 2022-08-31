@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<!-- <link rel="stylesheet" href="reset.css" /> -->
+		<link rel="stylesheet" href="styles.css" />
+
+		<title>Redberry</title>
+	</head>
+	<body>
+		<div class="wrapper">
+			<!-- <div class="wrapper__header">
+				<a href="index.html" class="arrow">
+					<img src="/img/Group 4.png" alt="back button" />
+				</a>
+
+				<div class="form-titles">
+					<p class="form-titles-active">თანამშრომლის ინფო</p>
+					<p>ლეპტოპის მახასიათებლები</p>
+				</div>
+			</div> -->
+			<a href="index.html" class="arrow">
+				<img src="/img/Group 4.png" alt="back button" />
+			</a>
+			<div class="form-titles">
+				<p class="form-titles-active" style="margin-right: 6.6rem">
+					თანამშრომლის ინფო
+				</p>
+				<p>ლეპტოპის მახასიათებლები</p>
+			</div>
+
+			<div class="white_wrapper">
+				<form action="" class="form">
+					<!-- <div class="file">
+						<p class="file-title">
+							ჩააგდე ან ატვირთე ლეპტოპის ფოტო
+						</p>
+						<input type="file" class="file-input" />
+						<label for="file" class="file-label">ატვირთე</label>
+					</div> -->
+
+					<label
+						for="file-input"
+						class="file-label"
+						style="margin-bottom: 3rem"
+					>
+						<p class="file-title">
+							ჩააგდე ან ატვირთე ლეპტოპის ფოტო
+						</p>
+						<input type="file" id="file-input" class="file-input" />
+						<button class="file-btn">ატვირთე</button>
+					</label>
+
+					<div class="first_input">
+						<div class="text_input" style="width: 50%">
+							<label for="name">ლეპტოპის სახელი</label> <br />
+							<input
+								type="text"
+								name="fname"
+								id="name"
+								placeholder="HP"
+							/>
+							<p>ლათინური ასოები, ციფრები, !@#$%^&*()_+=</p>
+						</div>
+
+						<div class="form_select" style="width: 50%">
+							<div class="select-wrapper">
+								<select name="team" id="team" class="select">
+									<option selected disabled hidden>
+										თიმი
+									</option>
+								</select>
+							</div>
+						</div>
+					</div>
+
+					<div class="divider"></div>
+
+					<div class="cpu-row">
+						<div class="form_select" style="width: 33.3%">
+							<div class="select-wrapper">
+								<select name="team" id="team" class="select">
+									<option selected disabled hidden>
+										CPU
+									</option>
+								</select>
+							</div>
+						</div>
+
+						<div class="text_input" style="width: 33.3%">
+							<label for="name">CPU-ს ბირთვი</label> <br />
+							<input
+								type="text"
+								name="fname"
+								id="name"
+								placeholder="14"
+							/>
+							<p>მხოლოდ ციფრები</p>
+						</div>
+
+						<div class="text_input" style="width: 33.3%">
+							<label for="name">CPU-ს ნაკადი</label> <br />
+							<input
+								type="text"
+								name="fname"
+								id="name"
+								placeholder="666"
+							/>
+							<p>მხოლოდ ციფრები</p>
+						</div>
+					</div>
+
+					<div class="forth-row">
+						<div class="text_input" style="width: 50%">
+							<label for="name">ლეპტოპის RAM (GB)</label> <br />
+							<input
+								type="text"
+								name="fname"
+								id="name"
+								placeholder="6666"
+							/>
+							<p>მხოლოდ ციფრები</p>
+						</div>
+						<div class="radio-label" style="width: 50%">
+							<label>მეხსიერების ტიპი</label> <br />
+
+							<label for="ssd">
+								<input
+									type="radio"
+									id="ssd"
+									name="memory-type"
+									value="ssd"
+								/>
+								SSD
+							</label>
+
+							<label for="hdd">
+								<input
+									type="radio"
+									id="hdd"
+									name="memory-type"
+									value="hdd"
+								/>
+								HDD
+								<span class="checkmark"></span>
+							</label>
+						</div>
+					</div>
+
+					<div class="divider"></div>
+
+					<div class="last_input">
+						<div class="text_input" style="width: 50%">
+							<label for="date">შეძენის რიცხვი (არჩევითი)</label>
+							<br />
+
+							<input
+								class="date-input"
+								name="date"
+								id="date"
+								placeholder="დდ / თთ / წწწწ"
+								onfocus="(this.type='date')"
+							/>
+						</div>
+						<div class="text_input" style="width: 50%">
+							<label for="name">ლეპტოპის ფასი</label> <br />
+							<input
+								type="text"
+								name="fname"
+								id="name"
+								placeholder="0000"
+							/>
+							<p>მხოლოდ ციფრები</p>
+						</div>
+					</div>
+
+					<div class="radio-label" style="margin-top: 4rem">
+						<label>ლეპტოპის მდგომარეობა</label> <br />
+
+						<label for="new">
+							<input
+								type="radio"
+								id="new"
+								name="condition"
+								value="new"
+							/>
+							ახალი
+						</label>
+
+						<label for="old">
+							<input
+								type="radio"
+								id="old"
+								name="condition"
+								value="old"
+							/>
+							მეორადი
+							<span class="checkmark"></span>
+						</label>
+					</div>
+
+					<div class="links-row">
+						<a class="back-link" href="#">უკან</a>
+
+						<button id="save-btn" class="next-btn">
+							<a href="#">დამახსოვრება</a>
+						</button>
+					</div>
+				</form>
+			</div>
+
+			<div class="footer">
+				<img src="img/LOGO-10 2.png" alt="" />
+			</div>
+		</div>
+
+		<div class="modal" id="modal">
+			<div class="modal-content">
+				<img src="img/Frame.png" alt="" />
+				<h2>ჩანაწერი დამატებულია</h2>
+
+				<button class="next-btn">
+					<a href="#">სიაში გადაყვანა</a>
+				</button>
+				<a href="#" class="back-link">მთავარი</a>
+			</div>
+		</div>
+
+		<script src="app.js"></script>
+	</body>
+</html>

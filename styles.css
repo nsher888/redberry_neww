@@ -57,23 +57,33 @@ html {
 .wrapper {
 	background-color: #f6f6f6;
 	overflow: hidden;
+	padding-top: 5rem;
+	position: relative;
 }
 
 .wrapper__header {
 	display: flex;
 	align-items: baseline;
 	gap: 50rem;
+	text-align: center;
 }
 
 .arrow {
 	display: inline-block;
-	margin-left: 7rem;
-	margin-top: 5.3rem;
+	/* margin-left: 7rem;
+	margin-top: 5.3rem; */
+	left: 7rem;
+	position: absolute;
 }
 
 .form-titles {
-	display: flex;
-	gap: 6.6rem;
+	/* display: inline-block; */
+	/* gap: 6.6rem; */
+	text-align: center;
+}
+
+.form-titles * {
+	display: inline-block;
 }
 
 .form-titles p {
@@ -92,11 +102,12 @@ html {
 
 .white_wrapper {
 	margin: 0 auto;
-	max-width: 122.6rem;
-	min-height: 100vh;
+	max-width: 112.6rem;
 	background-color: #fff;
 	border-radius: 18px;
 	padding-top: 8rem;
+	padding-bottom: 4rem;
+	margin-bottom: 6.7rem;
 }
 
 .form {
@@ -111,6 +122,7 @@ html {
 	width: 100%;
 	display: flex;
 	gap: 9rem;
+	align-items: center;
 }
 
 .text_input label {
@@ -133,6 +145,7 @@ html {
 	padding: 1.6rem 2rem;
 	margin-top: 0.8rem;
 	margin-bottom: 0.8rem;
+	outline: none;
 }
 
 .text_input p {
@@ -152,7 +165,6 @@ input[type='tel']:focus {
 
 .form_select {
 	background-color: #ebebeb;
-	margin-top: 3.6rem;
 	border-radius: 0.8rem;
 }
 
@@ -166,7 +178,7 @@ input[type='tel']:focus {
 	border: 0 !important;
 	background-color: transparent;
 	width: 100%;
-	padding: 1.6rem 2rem;
+	padding: 1.8rem 2rem;
 	font-family: 'Helvetica Neue';
 	font-style: normal;
 	font-weight: bold;
@@ -196,11 +208,268 @@ input[type='tel']:focus {
 	pointer-events: none;
 }
 
-/* .form_select {
-	position: relative;
-	display: flex;
-	width: 92.6rem;
-	height: 2.4rem;
-	line-height: 3;
+.next-btn {
+	margin-top: 5rem;
+	align-self: end;
+	padding: 1.8rem 6rem;
+	background: #62a1eb;
+	border-radius: 8px;
+	border: none;
+}
+
+.next-btn a {
+	color: white;
+	text-decoration: none;
+	font-family: 'Helvetica Neue';
+	font-style: normal;
+	font-weight: 500;
+	font-size: 20px;
+	line-height: 24px;
+}
+
+.next-btn:hover {
+	background-color: #317ad0;
+}
+
+.next-btn:active {
+	background-color: #1a5dab;
+}
+
+.footer {
+	text-align: center;
+	margin-bottom: 4rem;
+}
+
+.file-title {
+	font-family: 'Helvetica Neue';
+	font-style: normal;
+	font-weight: 500;
+	font-size: 20px;
+	line-height: 38px;
+	color: #4386a9;
+	max-width: 19.5rem;
+	text-align: center;
+}
+
+.file-input {
+	width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
 	overflow: hidden;
-} */
+	position: absolute;
+	z-index: -1;
+}
+
+.file-label {
+	font-family: 'Helvetica Neue';
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 6.5rem;
+	align-items: center;
+	border: 2px dashed #4386a9;
+	background: #f7f7f7;
+	border-radius: 18px;
+	height: 42rem;
+	cursor: pointer;
+}
+
+.file-btn {
+	color: white;
+	padding: 1.8rem 6rem;
+	background: #62a1eb;
+	border-radius: 8px;
+	font-family: 'Helvetica Neue';
+	font-style: normal;
+	font-weight: 500;
+	font-size: 20px;
+	line-height: 24px;
+	cursor: pointer;
+	border: none;
+	pointer-events: none;
+	cursor: pointer;
+}
+
+.divider {
+	border: 1px solid #c7c7c7;
+	margin-top: 4.4rem;
+	margin-bottom: 4.4rem;
+}
+
+.cpu-row {
+	width: 100%;
+	display: flex;
+	gap: 2.4rem;
+	align-items: center;
+}
+
+.forth-row {
+	margin-top: 4.4rem;
+	width: 100%;
+	display: flex;
+	gap: 6rem;
+}
+
+.radio-label label {
+	font-family: 'Helvetica Neue';
+	font-style: normal;
+	font-weight: bold;
+	font-size: 18px;
+	line-height: 21px;
+	margin-right: 4rem;
+}
+
+.radio-label label input {
+	margin-top: 2.6rem;
+	appearance: none;
+	border-radius: 50%;
+	width: 16px;
+	height: 16px;
+	border: 2px solid #8ac0e2;
+	margin-right: 0.6rem;
+	position: relative;
+	top: 4px;
+	cursor: pointer;
+}
+
+.radio-label label input:checked {
+	appearance: auto;
+}
+
+.last_input {
+	display: flex;
+	gap: 6rem;
+}
+
+input[type='date']::-webkit-inner-spin-button,
+input[type='date']::-webkit-calendar-picker-indicator {
+	display: none;
+	-webkit-appearance: none;
+}
+
+.links-row {
+	margin-top: 5rem;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.back-link {
+	margin-top: 5rem;
+	color: #62a1eb;
+	text-decoration: none;
+	font-family: 'Helvetica Neue';
+	font-style: normal;
+	font-weight: 500;
+	font-size: 20px;
+	line-height: 24px;
+}
+
+/* მოდალი */
+
+.modal {
+	display: none; /* Hidden by default */
+	position: fixed; /* Stay in place */
+	z-index: 1; /* Sit on top */
+	padding-top: 100px; /* Location of the box */
+	left: 0;
+	top: 0;
+	width: 100%; /* Full width */
+	height: 100%; /* Full height */
+	overflow: auto; /* Enable scroll if needed */
+	background-color: rgb(0, 0, 0); /* Fallback color */
+	background-color: #4a4a4a; /* Black w/ opacity */
+	text-align: center;
+}
+
+.modal-content {
+	max-width: 70rem;
+	max-height: 50rem;
+	margin: 0 auto;
+	background-color: white;
+	border-radius: 8px;
+	padding-bottom: 4.4rem;
+}
+
+.modal-content h2 {
+	font-family: 'Helvetica Neue';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 25px;
+	line-height: 31px;
+}
+
+.modal-content a {
+	display: block;
+}
+
+/* LIST */
+.list-wrapper {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding: 4rem 7rem;
+}
+
+.list-header {
+	display: flex;
+	align-items: center;
+	font-family: 'Helvetica Neue';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 20px;
+	line-height: 21px;
+	margin: 0 auto;
+	margin-bottom: 7rem;
+}
+
+.list-items-wrapper {
+	margin: auto;
+	/* background-color: black; */
+	max-width: 118rem;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	gap: 4rem;
+}
+
+.list-item {
+	display: flex;
+	padding: 1.4rem;
+	gap: 2.8rem;
+	background: #eafaff;
+	min-width: 56.3rem;
+	border: 1px solid #aed1ea;
+	border-radius: 20px;
+}
+
+.list-item-info {
+	padding-top: 3rem;
+}
+
+.list-item-info-name {
+	font-family: 'Helvetica Neue';
+	font-style: normal;
+	font-weight: 500;
+	font-size: 18px;
+	line-height: 21px;
+	margin-bottom: 1.8rem;
+}
+
+.list-item-info-model {
+	font-family: 'Helvetica Neue';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 21px;
+	margin-bottom: 4rem;
+}
+
+.list-item-info-more {
+	font-family: 'Helvetica Neue';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 21px;
+	color: #4386a9;
+}

@@ -24,8 +24,7 @@ fetch(teamsUrl)
 dropdown.addEventListener('change', () => {
 	const selectedTeam = dropdown.value;
 
-	position.innerHTML =
-		'<option value="position" disabled selected>პოზიცია</option>';
+	position.innerHTML = '<option disabled selected hidden>პოზიცია</option>';
 
 	fetch(PositionsUrl)
 		.then((response) => response.json())
@@ -44,3 +43,14 @@ dropdown.addEventListener('change', () => {
 			}
 		});
 });
+
+// MODAL
+
+const modal = document.getElementById('modal');
+const btn = document.getElementById('save-btn');
+
+btn.onclick = function () {
+	modal.style.display = 'block';
+	document.body.style.overflow = 'hidden';
+	document.body.style.height = '100%';
+};
