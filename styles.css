@@ -156,6 +156,14 @@ html {
 	line-height: 21px;
 }
 
+.red-alert {
+	border: 1.8px solid #e52f2f !important;
+}
+
+.red-error-message {
+	color: red;
+}
+
 input[type='text']:focus,
 input[type='tel']:focus {
 	background-color: rgba(43, 75, 242, 0.06);
@@ -472,4 +480,55 @@ input[type='date']::-webkit-calendar-picker-indicator {
 	font-size: 16px;
 	line-height: 21px;
 	color: #4386a9;
+}
+
+.info-wrapper {
+	margin: auto;
+	/* background-color: black; */
+	min-width: 118rem;
+}
+
+.info-first {
+	display: flex;
+	gap: 6.8rem;
+}
+
+.first-items {
+	width: 100%;
+	display: flex;
+	gap: 8rem;
+}
+
+.first-items-names {
+	display: flex;
+	flex-direction: column;
+	gap: 3.5rem;
+}
+
+.first-items-names p {
+	font-family: 'Helvetica Neue';
+	font-style: normal;
+	font-weight: bold;
+	font-size: 22px;
+	line-height: 27px;
+	color: #2e2e2e;
+}
+
+.first-items-values {
+	display: flex;
+	flex-direction: column;
+	gap: 3.5rem;
+}
+
+.first-items-values p {
+	font-family: 'Helvetica Neue';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 22px;
+	line-height: 27px;
+	/* or 123% */
+
+	/* შავი/400 */
+
+	color: #797979;
 }

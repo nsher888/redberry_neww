@@ -36,24 +36,28 @@
 				<form action="" class="form">
 					<div class="first_input" style="margin-bottom: 3.6rem">
 						<div class="text_input" style="width: 50%">
-							<label for="name">სახელი</label> <br />
+							<label for="firstname">სახელი</label> <br />
 							<input
 								type="text"
-								name="fname"
-								id="name"
+								name="firstname"
+								id="firstname"
 								placeholder="გრიშა"
 							/>
-							<p>მინიმუმ 2 სიმბოლო, ქართული ასოები</p>
+							<p id="error-msg">
+								მინიმუმ 2 სიმბოლო, ქართული ასოები
+							</p>
 						</div>
 						<div class="text_input" style="width: 50%">
 							<label for="surname">გვარი</label> <br />
 							<input
 								type="text"
-								name="lname"
+								name="surname"
 								id="surname"
 								placeholder="ბაგრატიონი"
 							/>
-							<p>მინიმუმ 2 სიმბოლო, ქართული ასოები</p>
+							<p id="error-msg">
+								მინიმუმ 2 სიმბოლო, ქართული ასოები
+							</p>
 						</div>
 					</div>
 
@@ -87,21 +91,23 @@
 							id="email"
 							placeholder="grisha666@redberry.ge"
 						/>
-						<p>უნდა მთავრდებოდეს @redberry.ge-ით</p>
+						<p id="error-msg">უნდა მთავრდებოდეს @redberry.ge-ით</p>
 					</div>
 
 					<div class="text_input">
-						<label>ტელეფონის ნომერი</label> <br />
+						<label for="telephone">ტელეფონის ნომერი</label> <br />
 						<input
 							type="tel"
 							name="telephone"
 							id="telephone"
 							placeholder="+995 598 00 07 01"
 						/>
-						<p>უნდა აკმაყოფილებდეს ქართული მობ-ნომრის ფორმატს</p>
+						<p id="error-msg">
+							უნდა აკმაყოფილებდეს ქართული მობ-ნომრის ფორმატს
+						</p>
 					</div>
 
-					<button class="next-btn">
+					<button id="next-btn" class="next-btn">
 						<a href="index3.html">შემდეგი</a>
 					</button>
 				</form>
