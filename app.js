@@ -66,33 +66,54 @@ const telephone = document.getElementById('telephone');
 // const errorMsg = document.getElementById('error-msg');
 
 window.onbeforeunload = function () {
-	localStorage.setItem('firstName', firstName.value);
-	localStorage.setItem('surname', surname.value);
-	localStorage.setItem('team', team.value);
-	localStorage.setItem('teamName', team.name);
-	localStorage.setItem('position', position.value);
-	localStorage.setItem('email', email.value);
-	localStorage.setItem('telephone', telephone.value);
+	sessionStorage.setItem('firstName', firstName.value);
+	sessionStorage.setItem('surname', surname.value);
+	sessionStorage.setItem('team', team.value);
+	sessionStorage.setItem('teamName', team.name);
+	sessionStorage.setItem('position', position.value);
+	sessionStorage.setItem('email', email.value);
+	sessionStorage.setItem('telephone', telephone.value);
 };
 
+// window.onload = function () {
+// 	if (!firstName.value) {
+// 		firstName.value = sessionStorage.firstName;
+// 	}
+// 	if (!surname.value) {
+// 		surname.value = sessionStorage.surname;
+// 	}
+// 	if (!team.value) {
+// 		team.value = sessionStorage.team;
+// 	}
+// 	if (!position.value) {
+// 		position.value = sessionStorage.position;
+// 	}
+// 	if (!email.value) {
+// 		email.value = sessionStorage.email;
+// 	}
+// 	if (!telephone.value) {
+// 		telephone.value = sessionStorage.telephone;
+// 	}
+// };
+
 window.onload = function () {
-	if (!firstName.value) {
-		firstName.value = localStorage.firstName;
+	if (sessionStorage.firstName) {
+		firstName.value = sessionStorage.firstName;
 	}
-	if (!surname.value) {
-		surname.value = localStorage.surname;
+	if (sessionStorage.surname) {
+		surname.value = sessionStorage.surname;
 	}
-	if (!team.value) {
-		team.value = localStorage.team;
+	if (sessionStorage.team) {
+		team.value = sessionStorage.team;
 	}
-	if (!position.value) {
-		position.value = localStorage.position;
+	if (sessionStorage.position) {
+		position.value = sessionStorage.position;
 	}
-	if (!email.value) {
-		email.value = localStorage.email;
+	if (sessionStorage.email) {
+		email.value = sessionStorage.email;
 	}
-	if (!telephone.value) {
-		telephone.value = localStorage.telephone;
+	if (sessionStorage.telephone) {
+		telephone.value = sessionStorage.telephone;
 	}
 };
 
@@ -139,7 +160,7 @@ function firstPageValidation() {
 	} else if (firstnameValue.length < 2) {
 		error(firstName, 'მინიმუმ 2 სიმბოლო');
 	} else if (!geoLetters.test(firstnameValue)) {
-		error(firstName, 'მხოლოდ ქართული სიმბოლოები, ჰემო კარგო');
+		error(firstName, 'მხოლოდ ქართული სიმბოლოები');
 	} else {
 		validated(firstName, 'მინიმუმ 2 სიმბოლო, ქართული ასოები');
 	}
@@ -151,7 +172,7 @@ function firstPageValidation() {
 	} else if (surnameValue.length < 2) {
 		error(surname, 'მინიმუმ 2 სიმბოლო');
 	} else if (!geoLetters.test(surnameValue)) {
-		error(surname, 'მხოლოდ ქართული სიმბოლოები, ჰემო კარგო');
+		error(surname, 'მხოლოდ ქართული სიმბოლოები');
 	} else {
 		validated(surname, 'მინიმუმ 2 სიმბოლო, ქართული ასოები');
 	}
