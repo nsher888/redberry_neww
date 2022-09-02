@@ -98,6 +98,9 @@ window.onload = function () {
 
 // FIRT PAGE SUBMIT BUTTON
 
+const geoLetters = /^[ა-ჰ]+$/;
+const geoPhone = /^(\+?995)?(79\d{7}|5\d{8})$/;
+
 function error(name, message) {
 	name.classList.add('red-alert');
 	name.parentNode.style.color = 'red';
@@ -106,9 +109,87 @@ function error(name, message) {
 	error[0].innerText = message;
 }
 
+function validated(name, message) {
+	name.classList.remove('red-alert');
+	name.parentNode.style.color = 'black';
+	const parentElement = name.parentElement;
+	const error = parentElement.querySelectorAll('#error-msg');
+	error[0].innerText = message;
+}
+
+function selectError(name) {
+	name.classList.add('red-alert-select');
+}
+
+function selectValidated(name) {
+	name.classList.remove('red-alert-select');
+}
+
 const nextBtn = document.getElementById('next-btn');
+
+function firstPageValidation() {
+	firstnameValue = firstName.value.trim();
+	surnameValue = surname.value.trim();
+	emailValue = email.value.trim();
+	telephoneValue = telephone.value.trim();
+
+	// NAME VALIDATIOn
+	if (!firstnameValue) {
+		error(firstName, 'მოცემული ველის შევსება სავალდებულოა');
+	} else if (firstnameValue.length < 2) {
+		error(firstName, 'მინიმუმ 2 სიმბოლო');
+	} else if (!geoLetters.test(firstnameValue)) {
+		error(firstName, 'მხოლოდ ქართული სიმბოლოები, ჰემო კარგო');
+	} else {
+		validated(firstName, 'მინიმუმ 2 სიმბოლო, ქართული ასოები');
+	}
+
+	// Surname Validation
+
+	if (!surnameValue) {
+		error(surname, 'მოცემული ველის შევსება სავალდებულოა');
+	} else if (surnameValue.length < 2) {
+		error(surname, 'მინიმუმ 2 სიმბოლო');
+	} else if (!geoLetters.test(surnameValue)) {
+		error(surname, 'მხოლოდ ქართული სიმბოლოები, ჰემო კარგო');
+	} else {
+		validated(surname, 'მინიმუმ 2 სიმბოლო, ქართული ასოები');
+	}
+
+	// Mail Validation
+	if (!emailValue) {
+		error(email, 'მოცემული ველის შევსება სავალდებულოა');
+	} else if (!emailValue.endsWith('@redberry.ge')) {
+		error(email, 'უნდა მთავრდებოდეს @redberry.ge-თი');
+	} else {
+		validated(email, 'უნდა მთავრდებოდეს @redberry.ge-თი');
+	}
+
+	// Select Validations
+
+	if (!telephoneValue) {
+		error(telephone, 'მოცემული ველის შევსება სავალდებულოა');
+	} else if (!geoPhone.test(telephoneValue)) {
+		error(telephone, 'არ აკმაყოფილებს ქართული მობილური ნომრის ფორმატს');
+	} else {
+		validated(telephone, 'უნდა აკმაყოფილებდეს ქართული მობ-ნომრის ფორმატს');
+	}
+
+	if (!team.value || team.value === 'თიმი') {
+		selectError(team);
+	} else {
+		selectValidated(team);
+	}
+
+	if (!position.value || position.value === 'პოზიცია') {
+		selectError(position);
+	} else {
+		selectValidated(position);
+	}
+}
 
 nextBtn.addEventListener('click', (e) => {
 	e.preventDefault();
-	error(firstName, 'RADIOACTIVE ZONE');
+
+	firstPageValidation();
 });

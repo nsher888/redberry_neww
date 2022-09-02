@@ -160,6 +160,10 @@ html {
 	border: 1.8px solid #e52f2f !important;
 }
 
+.red-alert-select {
+	box-shadow: 0 0 0 1.8px red !important;
+}
+
 .red-error-message {
 	color: red;
 }
@@ -183,7 +187,7 @@ input[type='tel']:focus {
 	appearance: none;
 	outline: 0;
 	box-shadow: none;
-	border: 0 !important;
+	border: 0;
 	background-color: transparent;
 	width: 100%;
 	padding: 1.8rem 2rem;
@@ -193,6 +197,7 @@ input[type='tel']:focus {
 	font-size: 18px;
 	line-height: 21px;
 	cursor: pointer;
+	border-radius: 0.8rem;
 }
 
 .select::-ms-expand {
